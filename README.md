@@ -76,6 +76,13 @@ Prosjektet bruker `src/vite-env.d.ts` til å definere hvilke `VITE_`-variabler s
 
 > **Merk:** Standard Vite-oppsett inkluderer `"types": ["vite/client"]` i `tsconfig.json`, som definerer en åpen index-signatur (`[key: string]: any`) og tillater alle variabelnavn uten feil. For å få streng typesikkerhet er denne fjernet, og CSS-importstøtte er deklarert manuelt i `vite-env.d.ts`.
 
+## Brancher
+
+| Branch | Beskrivelse |
+|--------|-------------|
+| `main` | Grunnleggende oppsett med Vite, TypeScript og `.env`-variabler. Bruker standard `"types": ["vite/client"]` i `tsconfig.json`. |
+| `feat/typesafe-env` | Utvider med typesikre miljøvariabler via `src/vite-env.d.ts`. Fjerner `"types": ["vite/client"]` slik at TypeScript fanger opp skrivefeil i env-variabelnavn. |
+
 ## Teknologier
 
 - [Vite](https://vite.dev/) — byggverktøy og utviklingsserver
