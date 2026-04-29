@@ -62,12 +62,19 @@ weather-api-klassekode/
 ├── index.html          # Hovedside med input-felt og resultatvisning
 ├── src/
 │   ├── main.ts         # TypeScript — fetch, rendering og event-håndtering
-│   └── style.css       # Styling for applikasjonen
+│   ├── style.css       # Styling for applikasjonen
+│   └── vite-env.d.ts   # TypeScript-deklarasjoner for miljøvariabler
 ├── .env                # Miljøvariabler (ikke med i git)
 ├── package.json        # Prosjektkonfigurasjon og avhengigheter
 ├── tsconfig.json       # TypeScript-konfigurasjon
 └── README.md
 ```
+
+## Typesikre miljøvariabler
+
+Prosjektet bruker `src/vite-env.d.ts` til å definere hvilke `VITE_`-variabler som er tilgjengelige via `import.meta.env`. Dette gjør at TypeScript gir feilmelding dersom du skriver feil variabelnavn. Filen deklarerer `ImportMetaEnv`-interfacet med de forventede variablene (`VITE_RAPIDAPI_KEY` og `VITE_RAPIDAPI_URL`).
+
+> **Merk:** Standard Vite-oppsett inkluderer `"types": ["vite/client"]` i `tsconfig.json`, som definerer en åpen index-signatur (`[key: string]: any`) og tillater alle variabelnavn uten feil. For å få streng typesikkerhet er denne fjernet, og CSS-importstøtte er deklarert manuelt i `vite-env.d.ts`.
 
 ## Teknologier
 

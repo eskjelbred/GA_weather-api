@@ -17,6 +17,8 @@ interface WeatherResponse {
   }
 }
 
+
+
 /* VARIABLER */
 const API_KEY = import.meta.env.VITE_RAPIDAPI_KEY;
 const API_URL = import.meta.env.VITE_RAPIDAPI_URL;
