@@ -69,6 +69,13 @@ weather-api-klassekode/
 └── README.md
 ```
 
+## Brancher
+
+| Branch | Beskrivelse |
+|--------|-------------|
+| `main` | Grunnleggende oppsett med Vite, TypeScript og `.env`-variabler. Bruker standard `"types": ["vite/client"]` i `tsconfig.json`. |
+| `feat/typesafe-env` | Utvider med typesikre miljøvariabler via `src/vite-env.d.ts`. Fjerner `"types": ["vite/client"]` slik at TypeScript fanger opp skrivefeil i env-variabelnavn. |
+
 ## Teknologier
 
 - [Vite](https://vite.dev/) — byggverktøy og utviklingsserver
